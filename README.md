@@ -26,7 +26,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>💻 Operating Systems Used</h2>
 
 - Windows 10 (21H2)
-- Ubuntu Server 22.04 LTS
+- Ubuntu 22.04 LTS
 
 ---
 
@@ -65,20 +65,35 @@ In the Azure Portal, a new Resource Group was created along with two Virtual Mac
 ### **Part 2: Observing ICMP Traffic**
 
 <p align="center">
-  <img src="https://i.imgur.com/hvZL0KP.png" height="80%" width="80%" alt="ICMP Ping Capture"/>
+  <img src="./ws.png" height="80%" width="80%" alt="ICMP Ping Capture"/>
 </p>
 
 <p>
 Wireshark was installed on the Windows 10 VM to capture ICMP traffic. A ping command was sent to the Ubuntu VM's private IP address, and ICMP Echo Requests and Replies were successfully observed in real-time within Wireshark.
 </p>
 
+<h3>Part 3: Configuring Network Security Group (Firewall)</h3>
+
 <p align="center">
-  <img src="https://i.imgur.com/rRS7oRt.png" height="80%" width="80%" alt="Network Security Group Rules"/>
+  <img src=./ping.png" height="80%" width="80%" alt="Network Security Group Rules"/>
+  <img src=./rule.png" height="80%" width="80%" alt="Network Security Group Rules"/>
+  <img src=./timeout.png" height="80%" width="80%" alt="Network Security Group Rules"/>
 </p>
 
 <p>
-A continuous ping was initiated from the Windows VM to the Ubuntu VM.  
-The inbound ICMP rule was then disabled in the Ubuntu VM’s Network Security Group (NSG).  
+A continuous ping was initiated from the Windows VM to the Ubuntu VM. The inbound ICMP rule was then disabled in the Ubuntu VM’s Network Security Group (NSG).  
 Ping requests immediately began timing out, and Wireshark confirmed that no ICMP replies were received.
 </p>
+
+<p>
+After re-enabling the ICMP rule in the NSG, connectivity was restored and the pings resumed successfully.
+</p>
+
+<p align="center">
+  <img src=./re-enable.png" height="80%" width="80%" alt="Network Security Group Rules"/>
+</p>
+
+
+
+
 

@@ -83,7 +83,7 @@ Wireshark was installed on the Windows 10 VM to capture ICMP traffic. A ping com
 </p>
 
 <p>
-A continuous ping was initiated from the Windows VM to the Ubuntu VM. The inbound ICMP rule was then disabled in the Ubuntu VM’s Network Security Group (NSG).  
+A continuous ping was initiated from the Windows VM to the Ubuntu VM. The inbound ICMP rule was then created in the Ubuntu VM’s Network Security Group (NSG).  
 Ping requests immediately began timing out, and Wireshark confirmed that no ICMP replies were received.
 </p>
 
@@ -94,7 +94,7 @@ Ping requests immediately began timing out, and Wireshark confirmed that no ICMP
 </p>
 
 <p>
-After re-enabling the ICMP rule in the NSG, connectivity was restored and the pings resumed successfully.
+After deleting the ICMP rule in the NSG, connectivity was restored and the pings resumed successfully.
 </p>
 
 

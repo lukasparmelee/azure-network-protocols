@@ -97,6 +97,87 @@ Ping requests immediately began timing out, and Wireshark confirmed that no ICMP
 After deleting the ICMP rule in the NSG, connectivity was restored and the pings resumed successfully.
 </p>
 
+---
+
+<h3>Part 4: Observing SSH Traffic</h3>
+
+<p align="center">
+  <img src="./ssh.png" height="80%" width="80%" alt="SSH Traffic Capture"/>
+</p>
+
+<p>
+After restoring ICMP connectivity, I moved on to capture and analyze SSH traffic. In Wireshark, I applied the SSH filter and initiated an SSH session from the Windows VM to the Ubuntu VM using PowerShell.
+</p>
+
+
+<p>
+Once connected, I entered several basic commands such as <code>pwd</code> and <code>ls</code> to generate traffic. Wireshark displayed continuous encrypted SSH packets representing command execution and communication between the two virtual machines. After verifying the session, I exited the SSH connection.
+</p>
+
+---
+
+<h3>Part 5: Observing DHCP Traffic</h3>
+
+<p align="center">
+  <img src="./DHCP.png" height="80%" width="80%" alt="DHCP Renewal Capture"/>
+</p>
+
+<p>
+To observe DHCP behavior, I filtered Wireshark using the <code>udp.port == 67 || udp.port == 68</code> keyword and initiated a DHCP renewal on the Windows 10 VM.
+</p>
+
+<p>
+I ran ipconfig /release and ipconfig /renew this triggered DHCP Discover, Offer, Request, and Acknowledge packets, visible in real-time on Wireshark. The process confirmed how the VM requests a new IP lease from the DHCP server on the network.
+</p>
+
+---
+
+<h3>Part 6: Observing DNS Traffic</h3>
+
+<p align="center">
+  <img src="./dns.png" height="80%" width="80%" alt="DNS Query Capture"/>
+</p>
+
+<p>
+Next, I analyzed DNS queries to external domains. In Wireshark, I filtered for <code>dns</code> traffic, then used the <code>nslookup</code> tool to query multiple websites.
+</p>
+
+<p>
+Wireshark displayed DNS Query and Response packets, confirming domain name resolution and returning the appropriate IP addresses for each domain.
+</p>
+
+---
+
+<h3>Part 7: Observing RDP Traffic</h3>
+
+<p align="center">
+  <img src="./rdp.png" height="80%" width="80%" alt="RDP Traffic Analysis"/>
+</p>
+
+<p>
+Finally, I captured Remote Desktop Protocol (RDP) traffic between my local machine and the Windows VM.  
+Wireshark was filtered to show only RDP packets using the expression:
+</p>
+
+<p>
+RDP traffic appeared as continuous packet streams because the protocol constantly transmits live screen updates, keyboard input, and mouse activity in real-time.
+</p>
+
+---
+
+<h2>🧰 Skills Demonstrated</h2>
+
+Azure Resource Group and Virtual Machine Management
+Virtual Network and Subnet Configuration
+Wireshark Packet Capture and Traffic Analysis
+Network Security Group (Firewall) Configuration
+Network Troubleshooting and Connectivity Testing
+DNS, DHCP, SSH, ICMP, and RDP Protocol Analysis
+Documentation and Professional Reporting
+
+
+
+
 
 
 

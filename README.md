@@ -45,8 +45,8 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 ### **Part 1: Creating Virtual Machines**
 
 <p align="center">
-  <img src="./windows-vm.png" height="80%" width="80%" alt="Azure VM Creation"/>
-  <img src="./linux-vm.png" height="80%" width="80%" alt="Azure VM Creation"/>
+  <img src="./windows.png" height="80%" width="80%" alt="Azure VM Creation"/>
+  <img src="./linux.png" height="80%" width="80%" alt="Azure VM Creation"/>
 </p>
 
 <p>

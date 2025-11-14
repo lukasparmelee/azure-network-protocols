@@ -75,9 +75,9 @@ Wireshark was installed on the Windows 10 VM to capture ICMP traffic. A ping com
 <h3>Part 3: Configuring Network Security Group (Firewall)</h3>
 
 <p align="center">
-  <img src=./ping.png" height="80%" width="80%" alt="Network Security Group Rules"/>
-  <img src=./rule.png" height="80%" width="80%" alt="Network Security Group Rules"/>
-  <img src=./timeout.png" height="80%" width="80%" alt="Network Security Group Rules"/>
+  <img src="./ping.png" height="80%" width="80%" alt="Network Security Group Rules"/>
+  <img src="./rule.png" height="80%" width="80%" alt="Network Security Group Rules"/>
+  <img src="./timeout.png" height="80%" width="80%" alt="Network Security Group Rules"/>
 </p>
 
 <p>
@@ -90,7 +90,7 @@ After re-enabling the ICMP rule in the NSG, connectivity was restored and the pi
 </p>
 
 <p align="center">
-  <img src=./re-enable.png" height="80%" width="80%" alt="Network Security Group Rules"/>
+  <img src="./re-enable.png" height="80%" width="80%" alt="Network Security Group Rules"/>
 </p>
 
 

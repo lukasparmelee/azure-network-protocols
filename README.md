@@ -72,6 +72,8 @@ In the Azure Portal, a new Resource Group was created along with two Virtual Mac
 Wireshark was installed on the Windows 10 VM to capture ICMP traffic. A ping command was sent to the Ubuntu VM's private IP address, and ICMP Echo Requests and Replies were successfully observed in real-time within Wireshark.
 </p>
 
+---
+
 <h3>Part 3: Configuring Network Security Group (Firewall)</h3>
 
 <p align="center">

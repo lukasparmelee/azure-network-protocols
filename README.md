@@ -75,11 +75,8 @@ Wireshark was installed on the Windows 10 VM to capture ICMP traffic. A ping com
 <h3>Part 3: Configuring Network Security Group (Firewall)</h3>
 
 <p align="center">
-  A continuous ping was initiated from the Windows VM to the Ubuntu VM.
   <img src="./ping.png" height="60%" width="60%" alt="Network Security Group Rules"/>
-  The inbound ICMP rule was then disabled in the Ubuntu VM’s Network Security Group (NSG).
   <img src="./rule.png" height="80%" width="80%" alt="Network Security Group Rules"/>
-  Ping requests immediately began timing out, and Wireshark confirmed that no ICMP replies were received.
   <img src="./timeout.png" height="80%" width="80%" alt="Network Security Group Rules"/>
 </p>
 
@@ -87,7 +84,7 @@ Wireshark was installed on the Windows 10 VM to capture ICMP traffic. A ping com
 A continuous ping was initiated from the Windows VM to the Ubuntu VM. The inbound ICMP rule was then disabled in the Ubuntu VM’s Network Security Group (NSG).  
 Ping requests immediately began timing out, and Wireshark confirmed that no ICMP replies were received.
 </p>
-
+---
 <p align="center">
   <img src="./re-enable.png" height="80%" width="80%" alt="Network Security Group Rules"/>
 </p>

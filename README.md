@@ -168,12 +168,12 @@ RDP traffic appeared as continuous packet streams because the protocol constantl
 <h2>🧰 Skills Demonstrated</h2>
 
 - Azure Resource Group and Virtual Machine Management
-Virtual Network and Subnet Configuration
-Wireshark Packet Capture and Traffic Analysis
-Network Security Group (Firewall) Configuration
-Network Troubleshooting and Connectivity Testing
-DNS, DHCP, SSH, ICMP, and RDP Protocol Analysis
-Documentation and Professional Reporting
+- Virtual Network and Subnet Configuration
+- Wireshark Packet Capture and Traffic Analysis
+- Network Security Group (Firewall) Configuration
+- Network Troubleshooting and Connectivity Testing
+- DNS, DHCP, SSH, ICMP, and RDP Protocol Analysis
+- Documentation and Professional Reporting
 
 
 
